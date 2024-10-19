@@ -127,4 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-export default project;
+exports.default = series(scssTask, jsTask, browserSyncServer, watchTask);
+
+exports.bulid = series(scssTask, jsTask);
